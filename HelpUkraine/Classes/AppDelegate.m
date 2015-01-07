@@ -377,7 +377,8 @@ NSString *_previousViewControllerName;
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     NSString *_deviceToken = [NSString stringWithFormat:@"%@",deviceToken];
-    _apnsToken = [_deviceToken substringWithRange:NSMakeRange(1, _deviceToken.length -2)];
+    NSString *_deviceTokenCut = [_deviceToken substringWithRange:NSMakeRange(1, _deviceToken.length -2)];
+    _apnsToken = [_deviceTokenCut stringByReplacingOccurrencesOfString:@" " withString:@""];
     #ifdef DEBUG
     NSLog(@"Device Token = %@", _apnsToken);
     #endif
