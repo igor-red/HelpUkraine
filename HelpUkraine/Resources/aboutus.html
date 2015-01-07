@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<style>
+/* reset -------------------------- */
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, dfn, del, p, blockquote, fieldset, input, textarea, select, article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, button, canvas, video {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, th, dfn, del {
+    font-weight: normal;
+    font-style: normal;
+}
+ul,
+ol {
+    list-style: none;
+}
+fieldset,
+img {
+    border: none;
+}
+caption,
+th {
+    text-align: left;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button {
+    cursor: pointer;
+    line-height: normal;
+}
+button,
+input {
+    line-height: normal;
+}
+input[type="hidden"],
+[hidden],
+.hidden {
+    display: none;
+}
+textarea {
+    overflow: auto;
+    resize: none;
+}
+article, aside, details, figcaption, figure, footer, header, nav, section, .clearfix {
+    display: block;
+}
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+a > img {
+    vertical-align: bottom;
+}
+strong,
+b {
+    font-weight: bold;
+}
+em,
+i {
+    font-style: italic;
+}
+del {
+    text-decoration: line-through;
+}
+:focus {
+    outline: none;
+}
+
+
+/* tools -------------------------- */
+.clear {
+    clear: both;
+    display: block;
+    line-height: 0;
+    height: 0;
+    font-size: 0;
+}
+.clearfix:after,
+.wrap:after,
+aside:after,
+section:after,
+article:after,
+.text:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    font-size: 0;
+}
+.align-left {
+    float: left !important;
+}
+.align-right {
+    float: right !important;
+}
+.overflow-hidden {
+    overflow: hidden;
+    display: block;
+}
+
+
+/* common -------------------------- */
+html {
+    height: 100%;
+    background: #ffffff;
+}
+body {
+    height: 100%;
+    font: 17px/26px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #6a6a6a;
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+.main {
+    min-height: 100%;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.wrap {
+    margin: 0 auto;
+    max-width: 940px;
+    padding: 0 20px;
+}
+a {
+    color: #007aff;
+    cursor: pointer;
+    -moz-transition: color 0.15s linear;
+    -o-transition: color 0.15s linear;
+    -webkit-transition: color 0.15s linear;
+    transition: color 0.15s linear;
+}
+a:hover {
+    color: #007aff;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+}
+h1, h2, h3 {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0 0 22px;
+}
+h4 {
+    font-size: 20px;
+    line-height: 35px;
+    margin-left: 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* content -------------------------- */
+.simple {
+    //text-align: center;
+    padding: 20px 0 95px;
+}
+.simple p {
+    margin: 0 60px 16px;
+}
+
+
+@media (max-width: 479px){
+    body {
+        word-wrap: break-word;
+    }
+    .simple p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+</style>
+</head>
+<body>
+    <section class="main">
+        <section class="simple">
+            <div class="wrap">
+            <img src="data:image/png;base64,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" style="width:32px; height:32px; vertical-align:bottom" /><span><a href="http://igorzhariy.com"><h4 style="display: inline;">Igor Zhariy</h4></a></span><br>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAjcAAAI3AGf6F88AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAYxQTFRF////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYoU7sgAAAIN0Uk5TAAECAwQFBgcICgsMDxESFBcYGhwdHh8hJCUnKCotMDE3OTo9PkBFRkdKTE1PUFFXWFpcX2BhYmRmZ2ltbnR1eHx+f4CBhoqMkpOUnqCjpaatr7Cxs7S2t7i8v8DBwsbIycvMz9HT1djZ293e3+Dj5Ofp6+zt7/Hy8/T19vf4+fv8/f6J2O9yAAAB7UlEQVRYw+2VV1PCQBRGbwwoFkTFjhUVe+9dsIEoir13RRG7YkEFzB+XTTZDcNQklxfH8XvauZtzksne3QVQnfQ8FuKIZf383luL53tmc1tfuMcCLF9/yNq4SIaQfMY1t0h4bgopWOJo+nF8n8gHC1G86VkUOFC8dl/k91JRgnGR9xikZbbBvSGfFT1UhCl/kaNz0bK7gYVBTkn6Ie2cDm+LNAvRiUHwKuFXGJihw6cyZloy4wUl/E0mtNDhWzVMxswRwWmmTNIg+154PNwMTLR+SgUe2QVIWKfv64spexQLhihvBZyg5E3g7YAT6I4F3sUgBXaBX9YCTlDzzvPbyYATGK54/kgPSIGb531ZgBR08/z1l6eoEkH+E+H9pYAUaHYI/1IFWMEY4UONgBWUh4igC7CCVO/Pl4iswEn4CUALLIR3AlIQ2Ti6VY6bZ5GCkcuH7abE0TUd4ASdfP85E37eZt8LtDfCDh7AChrpEbaLFDBbVODECTQ2kU9BCIqtrjPS/weOZqPcYfvNFxiLC/OMKaAgyu+Fvy/wlSDjo4K48i+ICDbj4zehLhAPH6gD0PcOo9Orh9+cuVdJ5hCCE+nPOlHPJwWlgmCSakFb7Hq1qeVN/liB36SOr7z73DJ3laoE5nYxHWLMv7VdPgBIUo+9O/92tgAAAABJRU5ErkJggg==" style="width:32px; height:32px; vertical-align:bottom" /><a href="https://www.facebook.com/buha903"><h4 style="display: inline;">Vitalii Buga</h4></a></span>
+                <br><br>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAFAElEQVR4AcXZcWhdVx3A8U/eS9zDuspo7NpsNm1Jm65amaJzSBx0IlVJVDpQpuCIdsI6KNiK6GzFTcVRJPrHLJPRMdAVFWZriVVEu6y1BEdxHRvEzE7tWhNT224rDdlr0xz/ebwcXu697960pZ8vgTZ9gRdu3z33/E6Loha422odlta+GDNe+3rFQZMKaZHfMr16rVeR7i3PGjToNVdVxTYvCgV60TYVV0XZJqcExTtlk/KVXoKNfmCNWDDiOcPGnXHWGW1urfc+H0bs777tN+ap07AQddle92iXZblvzrlYwzoprseEUO+cnZZrrgTW+p7LQr0JPQrqVxVqVT3i7ZpZZ5e/mfSgFnxciFPVL7eyAaHeIbdpptX26A2fdsQlYU4DynIo2yfU26NFM+91VMjVPmVNDQhxvibbZ1SF3A1ool9oaKMstzgnFKpfhp45v80zsvV4ydc9bEbIWVWPFJ0mhDjT1shWBhwVcjehU6JhoaEt0rWatdi0UKBhCTYKDe2QbrVJpzyoDTwlFGyjBmUjQtT/fFm6Ln+qve6Mn9f/XKQRZWKbav8wY8wRP3KTJK1ut93zZoQrbpNIpb7gfl+WlcaFq9QpFXXbat+ccrNsd7gkuOyQ3f4lXFHbqKkvoI/LttAXVAX3gwUNV/+iR3Rb50jup6aaZfX1fpUsFf8UBMe1178zGN0zegFPCjlbBmzOeddjsT53WmjWDQ7Wfvog4KtC7jZTQi9gnywlvb7rUxY7b1bVZx0Do+DTHpdfLywwVXs/y6Upuc8/hFqHfUTsXXY57a9gkRNC7qYsoK/2l5PSrPey0NCPtZqr1Q+FQvXNfgSflmyF80JCB7WLvU2/V4t/FEs6AIclKXvajZKsd9QnAW2+4d+etFJRHeypvZdX9Ctr9JWm69oOn3NMmGd7GBLq/VJZjL3CNW2IUSFqg1ibN4Vr2mhJh1mX/EfsNgtdWx0lsa1eFps0P8GrLsil1ZjVgF94TIxz5udev9Ki250+qN1RF9ztPWZUdIkxFv8n7NKoxYRQPO3SvNtuIWqoZAxwxHGNgh3m4x2A293rJrGTHjBp1ljJOOC3kuz2kuL2226Xk17wqDfFuOgvZo23GgOskuSyzQa9UzHrrAM8ZUaj39vgrEVgbHYxGpVmmeeEeXXe4sQL1Fe/d/bFy/ESaUru8bPiS41vSbbEzOxyzIHayz+vmYVW+pD7vC7k6ISKZF+qveKA+JHMoLxW5bpFf1GaX9cfyRoeSpfLa7PQpOe1SHari/FDafxY/qi8bjApZPZRaXZGj+UNG5PTKvL6nZDRM9Lc6I14Y9K4NXtYXluE1C7qkuY70dYsYXNa1S2fbiG1n0izxlvx5jRpe/5n+bSYEhKbtiz1Zw5F2/PUAcX98hkREtsrzQPZo6/h+mW4Sx4HhMQ+JtldqlkjmnhIddYqzT2WMvtI1uVMsyFVPKYbtWieN6MtkiwyGo3pcg0qj1sr2/uFhFaba63j0aAy96j2vD5ZWl1ImAHO1Rdt7gaKDatnPCTLs0JDxzR6yEw8rC4+rt+vW5oPeE0Q94JYt/3p4/r8BxbTnnCLZDc7LET9MRpjP2E67cCi+JHNlJ3aJWmz1RtCrZ+CdjtN5T+yyXtoNW3IVl3mardLVfC6DbYaMp3/0Kr4sR0j/uCEceP+axxLLbHUCp+wQmehY7vrf3B5/Y9ur//h9XU/vv8/GKY/6JRZ2cMAAAAASUVORK5CYII=" style="width:32px; height:32px; vertical-align:bottom" /><a href="http://helpua.com.ua"><h4 style="display: inline;">helpua.com.ua</h4></a></span>
+            </div><!-- wrap -->
+        </section><!-- simple -->
+    </section><!-- main -->
+</body>
+<script type="text/javascript">
+	document.ontouchmove = function(event){
+    event.preventDefault();
+}
+</script>
+</html>

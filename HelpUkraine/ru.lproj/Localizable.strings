@@ -1,0 +1,73 @@
+/* 
+  Localizable.strings
+  HelpUkraine
+
+  Created by Admin on 9/4/14.
+  Copyright (c) 2014 Igor Zhariy. All rights reserved.
+*/
+
+// Push View
+"enablePushTitle" = "Включите уведомления";
+"enablePushText" = "Таким образом Вы сможете\nполучать важные новости";
+"enablePushButton" = "OK";
+"cancelPushButton" = "Не сейчас";
+"startButton" = "Начать";
+
+// Main View
+"backToMainView" = "Назад";
+"newsButton" = "Новости";
+"comingSoonLabel1" = "скоро";
+"getHelpButton" = "Получить\nпомощь";
+"comingSoonLabel2" = "скоро";
+"sendHelpButton" = "Отправить\nпомощь";
+"settingsButton" = "Настройки";
+
+// Navigation Titles
+"sendHelpViewNavigationTitle" = "Группы";
+"listViewNavigationTitle" = "Контакты";
+"detilsViewNavigationTitle" = "Детали";
+"settingsViewNavigationTitle" = "Настройки";
+"WebViewNavigationTitle" = "Вебсайт";
+
+// Settings View
+"notificationsSettings" = "Уведомления";
+"languagesSettings" = "Язык";
+"enableNotificationsAlarmTitle" = "Разрешите уведомления";
+"enableNotificationsSwitcherAlarmMessage" = "Для получения уведомлений откройте настройки iPhone > Уведомления > Help Ukraine и включите 'Разрешить уведомления', 'На заблокированном экране' и 'Баннеры'";
+"enableNotificationsAlarmCancelButton" = "Хорошо";
+"disableNotificationsAlarmTitle" = "Запретите уведомления";
+"disableNotificationsSwitcherAlarmMessage" = "Для отключения уведомлений откройте настройки iPhone > Уведомления > Help Ukraine и выключите 'Разрешить уведомления'";
+"disableNotificationsAlarmCancelButton" = "Хорошо";
+"languageChanged" = "Язык изменён";
+"pleaseRestart" = "Пожалуйста перезапустите приложение чтобы применить изменения";
+"languageChangedCancelButton" = "Хорошо";
+"generalGroupLabel" = "Основные";
+"databaseGroupLabel" = "База данных";
+"infoGroupLabel" = "Информация";
+"reloadDatabaseLabel" = "Обновление..";
+"feedbackRow" = "Отправить отзыв";
+"aboutUsRow" = "О нас";
+"addedOrganizations" = "Добавлено";
+"organizations" = "организаций";
+"noNewUpdates" = "Нет обновлений";
+"noInternet" = "Нет Интернета";
+
+// Feedback view
+"feedbackViewNavigationTitle" = "Отзыв";
+"emailPlaceholder" = "Email";
+"messagePlaceholder" = "Сообщение...";
+"sendFeedback" = "Отправить";
+
+"feedbackMessageThankYou" = "Спасибо";
+"feedbackMessageGood" = "Мы получили Ваш отзыв!";
+"feedbackMessageError" = "Ошибка";
+"feedbackMessageBad" = "Возникла проблема. Пожалуйста повторите или свяжитесь с нами на helpua.com.ua";
+"feedbackButtonOkay" = "OK";
+
+"emailSubject" = "Привет! Я хочу помочь";
+"emailBody" = "Отправлено из приложения Help Ukraine\nhttp://helpua.com.ua/app";
+"OK" = "OK";
+"connectToInternet" = "Пожалуйста подключитесь к Интернету и повторите попытку";
+
+"noComposer" = "Ошибка";
+"enableEmail" = "На Вашем устройстве не установлена учётная запись для электронной почты";

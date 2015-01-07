@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  HelpUkraine
+
+  Created by Admin on 9/4/14.
+  Copyright (c) 2014 Igor Zhariy. All rights reserved.
+*/
+
+// Push View
+"enablePushTitle" = "Увімкніть сповіщення";
+"enablePushText" = "Таким чином Ви зможете\nотримувати важливі новини";
+"enablePushButton" = "OK";
+"cancelPushButton" = "Не зараз";
+"startButton" = "Розпочати";
+
+// Main View
+"backToMainView" = "Назад";
+"newsButton" = "Новини";
+"comingSoonLabel1" = "скоро";
+"getHelpButton" = "Отримати\nдопомогу";
+"comingSoonLabel2" = "скоро";
+"sendHelpButton" = "Надати\nдопомогу";
+"settingsButton" = "Налаштування";
+
+// Navigation Titles
+"sendHelpViewNavigationTitle" = "Групи";
+"listViewNavigationTitle" = "Контакти";
+"detilsViewNavigationTitle" = "Деталі";
+"settingsViewNavigationTitle" = "Налаштування";
+"WebViewNavigationTitle" = "Вебсайт";
+
+// Settings View
+"notificationsSettings" = "Сповіщення";
+"languagesSettings" = "Мова";
+"enableNotificationsAlarmTitle" = "Дозвольте сповіщення";
+"enableNotificationsSwitcherAlarmMessage" = "Для увімкнення сповіщень відкрийте налаштування iPhone > Сповіщення > Help Ukraine та ввімкніть 'Дозволити сповіщення', 'На замкненому екрані' і 'Банер'";
+"enableNotificationsAlarmCancelButton" = "Добре";
+"disableNotificationsAlarmTitle" = "Заборонити сповіщення";
+"disableNotificationsSwitcherAlarmMessage" = "Для вимкнення сповіщень відкрийте налаштування iPhone > Сповіщення > Help Ukraine та вимнкніть 'Дозволити сповіщення'";
+"disableNotificationsAlarmCancelButton" = "Добре";
+"languageChanged" = "Мову змінено";
+"pleaseRestart" = "Будьласка перезавантажте додаток щоб застосувати зміни";
+"languageChangedCancelButton" = "Добре";
+"generalGroupLabel" = "Основні";
+"databaseGroupLabel" = "База даних";
+"infoGroupLabel" = "Інформація";
+"reloadDatabaseLabel" = "Оновлення..";
+"feedbackRow" = "Надіслати відгук";
+"aboutUsRow" = "Про нас";
+"addedOrganizations" = "Додано";
+"organizations" = "организацій";
+"noNewUpdates" = "Немає оновлень";
+"noInternet" = "Немає Інтернету";
+
+// Feedback view
+"feedbackViewNavigationTitle" = "Відгук";
+"emailPlaceholder" = "Email";
+"messagePlaceholder" = "Повідомлення...";
+"sendFeedback" = "Відправити";
+
+"feedbackMessageThankYou" = "Дякуємо";
+"feedbackMessageGood" = "Ми отримали Ваш відгук!";
+"feedbackMessageError" = "Помилка";
+"feedbackMessageBad" = "Виникла помилка. Будьласка повторіть або зв'яжіться з нами на helpua.com.ua";
+"feedbackButtonOkay" = "OK";
+
+
+"emailSubject" = "Привіт! Я хочу допомогти";
+"emailBody" = "Надіслано з додатку Help Ukraine\nhttp://helpua.com.ua/app";
+"OK" = "OK";
+"connectToInternet" = "Будьласка підключіться до Інтернету та спробуйте ще раз";
+
+"noComposer" = "Помилка";
+"enableEmail" = "На Вашому пристрої не встановлений обліковий запис для електронної пошти";

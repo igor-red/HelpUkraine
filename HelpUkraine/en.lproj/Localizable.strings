@@ -1,0 +1,73 @@
+/* 
+  Localizable.strings
+  HelpUkraine
+
+  Created by Admin on 9/4/14.
+  Copyright (c) 2014 Igor Zhariy. All rights reserved.
+*/
+
+// Push View
+"enablePushTitle" = "Turn On Notifications";
+"enablePushText" = "This way, you will see\nimportant news and updates";
+"enablePushButton" = "OK";
+"cancelPushButton" = "Not now";
+"startButton" = "Start";
+
+// Main View
+"backToMainView" = "Back";
+"newsButton" = "News";
+"comingSoonLabel1" = "coming soon";
+"getHelpButton" = "Get Help";
+"comingSoonLabel2" = "coming soon";
+"sendHelpButton" = "Send Help";
+"settingsButton" = "Settings";
+
+// Navigation Titles
+"sendHelpViewNavigationTitle" = "Groups";
+"listViewNavigationTitle" = "Contacts";
+"detilsViewNavigationTitle" = "Details";
+"settingsViewNavigationTitle" = "Settings";
+"WebViewNavigationTitle" = "Website";
+
+// Settings View
+"notificationsSettings" = "Notifications";
+"languagesSettings" = "Language";
+"enableNotificationsAlarmTitle" = "Allow Notifications";
+"enableNotificationsSwitcherAlarmMessage" = "To enable notifications please go to iPhone Settings > Notifications > Help Ukraine and switch on 'Allow Notifications', 'Show on Lock Screen' and 'Banners'";
+"enableNotificationsAlarmCancelButton" = "Okay";
+"disableNotificationsAlarmTitle" = "Disable Notifications";
+"disableNotificationsSwitcherAlarmMessage" = "To disable notifications please go to iPhone Settings > Notifications > Help Ukraine and switch off 'Allow Notifications'";
+"disableNotificationsAlarmCancelButton" = "Okay";
+"languageChanged" = "Language changed";
+"pleaseRestart" = "Please restart app to apply changes";
+"languageChangedCancelButton" = "Okay";
+"generalGroupLabel" = "General";
+"databaseGroupLabel" = "Database";
+"infoGroupLabel" = "Information";
+"reloadDatabaseLabel" = "Updating..";
+"feedbackRow" = "Send feedback";
+"aboutUsRow" = "About us";
+"addedOrganizations" = "Added";
+"organizations" = "organizations";
+"noNewUpdates" = "No new updates";
+"noInternet" = "No Internet";
+
+// Feedback view
+"feedbackViewNavigationTitle" = "Feedback";
+"emailPlaceholder" = "Email";
+"messagePlaceholder" = "Message...";
+"sendFeedback" = "Send";
+
+"feedbackMessageThankYou" = "Thank you";
+"feedbackMessageGood" = "We have received your feedback!";
+"feedbackMessageError" = "Problem";
+"feedbackMessageBad" = "Some issue occured. Please try again or find our contacts at helpua.com.ua";
+"feedbackButtonOkay" = "OK";
+
+"emailSubject" = "Hi! I want to help";
+"emailBody" = "Sent from Help Ukraine app\nhttp://helpua.com.ua/app";
+"OK" = "OK";
+"connectToInternet" = "Please connect to the Internet and try again";
+
+"noComposer" = "Error";
+"enableEmail" = "You don't have any email account set on your device";
