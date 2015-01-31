@@ -15,12 +15,7 @@
 
 // Main View
 "backToMainView" = "Назад";
-"newsButton" = "Новини";
-"comingSoonLabel1" = "скоро";
-"getHelpButton" = "Отримати\nдопомогу";
-"comingSoonLabel2" = "скоро";
-"sendHelpButton" = "Надати\nдопомогу";
-"settingsButton" = "Налаштування";
+"organizationsMain" = "Организації";
 
 // Navigation Titles
 "sendHelpViewNavigationTitle" = "Групи";

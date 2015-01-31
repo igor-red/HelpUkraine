@@ -11,10 +11,13 @@
 
 @interface MainViewController : UIViewController 
 {
+    // Background
+    UIImageView *_backgroundImageView;
+    UIImage *_organizationsImage;
+    UIImage *_settingsImage;
+    
     //Buttons
-    UIButton *_sendHelpButton;
-    UIButton *_getHelpButton;
-    UIButton *_newsButton;
+    UIButton *_organizationsButton;
     UIButton *_settingsButton;
     
     //Labels

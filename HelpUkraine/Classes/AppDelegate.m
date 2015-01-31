@@ -27,6 +27,9 @@ NSString *_previousViewControllerName;
     // Initialize window
     self.window = [[UIWindow alloc] initWithFrame:_bounds];
     
+    // White status bar
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     // First start vs Regular start
     if ([_userDefaults objectForKey:@"_firstStart"] != nil)
     {
@@ -50,10 +53,13 @@ NSString *_previousViewControllerName;
         
         // Launching directly to the app
         UINavigationController *_navController = [[UINavigationController alloc] initWithRootViewController:_mainViewController];
-        [_navController.navigationBar setBackgroundImage:[UIImage new]
-                                 forBarMetrics:UIBarMetricsDefault];
+        //[_navController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+        //[_navController.navigationBar setBackgroundColor:UIColorFromRGB(0x5590a5)];
+        //_navController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
         _navController.navigationBar.shadowImage = [UIImage new];
         _navController.navigationBar.translucent = YES;
+        //_navController.navigationBar.barTintColor = UIColorFromRGB(0x5590a5);
+        //_navController.navigationBar.tintColor = [UIColor whiteColor];
         [_navController setNavigationBarHidden:YES];
         self.window.rootViewController = _navController;
         [self.window makeKeyAndVisible];
@@ -479,6 +485,11 @@ NSString *_previousViewControllerName;
     if ([platform isEqualToString:@"i386"])         return @"Simulator";
     if ([platform isEqualToString:@"x86_64"])       return @"Simulator";
     return platform;
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -15,12 +15,7 @@
 
 // Main View
 "backToMainView" = "Back";
-"newsButton" = "News";
-"comingSoonLabel1" = "coming soon";
-"getHelpButton" = "Get Help";
-"comingSoonLabel2" = "coming soon";
-"sendHelpButton" = "Send Help";
-"settingsButton" = "Settings";
+"organizationsMain" = "Organizations";
 
 // Navigation Titles
 "sendHelpViewNavigationTitle" = "Groups";

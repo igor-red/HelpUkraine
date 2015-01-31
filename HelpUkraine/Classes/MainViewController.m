@@ -29,149 +29,75 @@
 // Init views
 - (void)initView
 {
-    // View's white background
-    self.view.backgroundColor = [UIColor whiteColor];
+    // View's black background
+    self.view.backgroundColor = [UIColor blackColor];
     
-    // Initializing Rectangles for the big buttons buttons
-    float _margin = 8;
-    float _buttonWidth = _bounds.size.width / 2 - _margin * 1.5;
-    float _buttonHeight = (_bounds.size.height - _statusBarHeight ) / 2 - _margin * 1.5;
-    
-    // News button frames
-    CGRect _newsButtonRect = CGRectMake(0 + _margin, 0 + _statusBarHeight + _margin, _buttonWidth, _buttonHeight);
-    CGRect _newsButtonLabelRect = CGRectMake(0 + _margin, 0 + _statusBarHeight + _margin, _buttonWidth, _buttonHeight / 3);
-    CGRect _comingSoonLabel1Rect = CGRectMake(0 + _margin, (_bounds.size.height - _statusBarHeight ) / 2 - _margin * 3.1, _buttonWidth, 20);
-    
-    // Get help button frames
-    CGRect _getHelpButtonRect = CGRectMake(_bounds.size.width / 2 + _margin * 0.5, 0 + _statusBarHeight + _margin, _buttonWidth, _buttonHeight);
-    CGRect _getHelpButtonLabelRect = CGRectMake(_bounds.size.width / 2 + _margin * 0.5, 0 + _statusBarHeight + _margin, _buttonWidth, _buttonHeight / 3);
-    CGRect _comingSoonLabel2Rect = CGRectMake(_bounds.size.width / 2 + _margin * 0.5, (_bounds.size.height - _statusBarHeight ) / 2 - _margin * 3.1, _buttonWidth, 20);
-    
-    // Send help button frames
-    CGRect _sendHelpButtonRect = CGRectMake(0 + _margin, (_bounds.size.height - _statusBarHeight) / 2 + _statusBarHeight + _margin * 0.5, _buttonWidth, _buttonHeight);
-    CGRect _sendHelpButtonLabelRect = CGRectMake(0 + _margin, (_bounds.size.height - _statusBarHeight) / 2 + _statusBarHeight + _margin * 0.5, _buttonWidth, _buttonHeight / 3);
-    
-    // Settings button frames
-    CGRect _settingsButtonRect = CGRectMake(_bounds.size.width / 2 + _margin * 0.5, (_bounds.size.height - _statusBarHeight) / 2 + _statusBarHeight + _margin * 0.5, _buttonWidth, _buttonHeight);
-    CGRect _settingsButtonLabelRect = CGRectMake(_bounds.size.width / 2 + _margin * 0.5, (_bounds.size.height - _statusBarHeight) / 2 + _statusBarHeight + _margin * 0.5, _buttonWidth, _buttonHeight / 3);
-    
-    
-    // Spacing for the 'soon' label depending on screen size
-    CGFloat _spacing;
+    // View's background image
+    _backgroundImageView = [[UIImageView alloc] initWithFrame:_bounds];
+    [_backgroundImageView setImage:[UIImage imageNamed:@"mainBg@3x.jpg"]];
+    _backgroundImageView.alpha = 0.5;
+    _backgroundImageView.frame = _bounds;
     if (_iPhone4)
-        _spacing = 80;
-    else if (_iPhone5)
-        _spacing = 90;
-    else _spacing = 120;
+        _backgroundImageView.frame = CGRectMake(0, -88, 320, 568);
+    [self.view addSubview:_backgroundImageView];
+
+    // Defining image resources
+    if (_iPhone6)
+    {
+        _organizationsImage = [UIImage imageNamed:@"organizations@2x-667.png"];
+        _settingsImage = [UIImage imageNamed:@"settings@2x-667.png"];
+    }
+    else
+    {
+        _organizationsImage = [UIImage imageNamed:@"organizations.png"];
+        _settingsImage = [UIImage imageNamed:@"settings.png"];
+    }
     
-    // Setting color and font for titles and the 'soon' labels
-    UIColor *_titlesColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
-    UIFont *_titlesFont = [UIFont fontWithName:@"HelveticaNeue-Thin" size:20];
-    UIColor *_comingSoonColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
-    UIFont *_comingSoonFont = [UIFont fontWithName:@"HelveticaNeue-Thin" size:15];
-    
-    
-    // News button
-    _newsButton = [[UIButton alloc] initWithFrame:_newsButtonRect];
-    [_newsButton setBackgroundColor: UIColorFromRGB(0x6dc763)];
-    [_newsButton setImage:[UIImage imageNamed:@"mainViewNews.png"] forState:UIControlStateNormal];
-    [_newsButton setImage:[UIImage imageNamed:@"mainViewNews.png"] forState:UIControlStateHighlighted];
-    _newsButton.layer.cornerRadius = 10;
-    [self.view addSubview:_newsButton];
-    
-    // News label
-    _newsButtonLabel = [[UILabel alloc] initWithFrame:_newsButtonLabelRect];
-    _newsButtonLabel.text = NSLocalizedString(@"newsButton", nil);
-    _newsButtonLabel.textColor = _titlesColor;
-    _newsButtonLabel.font = _titlesFont;
-    _newsButtonLabel.textAlignment = NSTextAlignmentCenter;
-    _newsButtonLabel.numberOfLines = 0;
-    [self.view addSubview:_newsButtonLabel];
-    
-    // Coming Soon Label 1
-    _comingSoonLabel1 = [[UILabel alloc] initWithFrame:_comingSoonLabel1Rect];
-    _comingSoonLabel1.text = NSLocalizedString(@"comingSoonLabel1", nil);
-    _comingSoonLabel1.font = _comingSoonFont;
-    _comingSoonLabel1.textColor = _comingSoonColor;
-    _comingSoonLabel1.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:_comingSoonLabel1];
-    
-    // Get Help button
-    _getHelpButton = [[UIButton alloc] initWithFrame:_getHelpButtonRect];
-    [_getHelpButton setBackgroundColor:UIColorFromRGB(0xee5653)];
-    [_getHelpButton setImage:[UIImage imageNamed:@"mainViewGetHelp.png"] forState:UIControlStateNormal];
-    [_getHelpButton setImage:[UIImage imageNamed:@"mainViewGetHelp.png"] forState:UIControlStateHighlighted];
-    _getHelpButton.layer.cornerRadius = 10;
-    [self.view addSubview:_getHelpButton];
-    
-    // Get help label
-    _getHelpButtonLabel = [[UILabel alloc] initWithFrame:_getHelpButtonLabelRect];
-    _getHelpButtonLabel.text = NSLocalizedString(@"getHelpButton", nil);
-    _getHelpButtonLabel.textColor = _titlesColor;
-    _getHelpButtonLabel.font = _titlesFont;
-    _getHelpButtonLabel.textAlignment = NSTextAlignmentCenter;
-    _getHelpButtonLabel.numberOfLines = 0;
-    [self.view addSubview:_getHelpButtonLabel];
-    
-    // Coming Soon Label 2
-    _comingSoonLabel2 = [[UILabel alloc] initWithFrame:_comingSoonLabel2Rect];
-    _comingSoonLabel2.text = NSLocalizedString(@"comingSoonLabel2", nil);
-    _comingSoonLabel2.font = _comingSoonFont;
-    _comingSoonLabel2.textColor = _comingSoonColor;
-    _comingSoonLabel2.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:_comingSoonLabel2];
-    
-    // Send Help button
-    _sendHelpButton = [[UIButton alloc] initWithFrame:_sendHelpButtonRect];
-    [_sendHelpButton setBackgroundColor:UIColorFromRGB(0xe1d431)];
-    [_sendHelpButton addTarget:self action:@selector(sendHelpButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    [_sendHelpButton setImage:[UIImage imageNamed:@"mainViewSendHelp.png"] forState:UIControlStateNormal];
-    [_sendHelpButton setImage:[UIImage imageNamed:@"mainViewSendHelp.png"] forState:UIControlStateHighlighted];
-    _sendHelpButton.layer.cornerRadius = 10;
-    [self.view addSubview:_sendHelpButton];
-    
-    // Send help label
-    _sendHelpButtonLabel = [[UILabel alloc] initWithFrame:_sendHelpButtonLabelRect];
-    _sendHelpButtonLabel.text = NSLocalizedString(@"sendHelpButton", nil);
-    _sendHelpButtonLabel.textColor = _titlesColor;
-    _sendHelpButtonLabel.font = _titlesFont;
-    _sendHelpButtonLabel.textAlignment = NSTextAlignmentCenter;
-    _sendHelpButtonLabel.numberOfLines = 0;
-    [self.view addSubview:_sendHelpButtonLabel];
+    // Organizations button
+    CGFloat _organizationsImageWidth = _organizationsImage.size.width;
+    CGRect _organizationsButtonRect = CGRectMake(_bounds.size.width * 0.25, _bounds.size.height * 0.65, _bounds.size.width * 0.5, _organizationsImageWidth + 40);
+    _organizationsButton = [[UIButton alloc] initWithFrame:_organizationsButtonRect];
+    [_organizationsButton setImage:_organizationsImage forState:UIControlStateNormal];
+    [_organizationsButton setImage:_organizationsImage forState:UIControlStateHighlighted];
+    [_organizationsButton setTitle:NSLocalizedString(@"organizationsMain", nil) forState:UIControlStateNormal];
+    [_organizationsButton setTitle:NSLocalizedString(@"organizationsMain", nil) forState:UIControlStateHighlighted];
+    [_organizationsButton addTarget:self action:@selector(sendHelpButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    // Center image and label
+    CGFloat _spacing = 10;
+    _organizationsButton.titleEdgeInsets = UIEdgeInsetsMake( 0.0, - _organizationsImageWidth, - (_organizationsImageWidth + _spacing), 0.0);
+    CGSize _organizationsButtonTitleSize = [_organizationsButton.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: _organizationsButton.titleLabel.font}];
+    _organizationsButton.imageEdgeInsets = UIEdgeInsetsMake(- (_organizationsButtonTitleSize.height + _spacing), 0.0, 0.0, - _organizationsButtonTitleSize.width);
+    [self.view addSubview:_organizationsButton];
     
     // Settings button
+    CGFloat _settingsImageSide = _settingsImage.size.width;
+    CGRect _settingsButtonRect = CGRectMake(_bounds.size.width - _settingsImageSide * 2, _bounds.size.height - _settingsImageSide * 2, _settingsImageSide * 2, _settingsImageSide * 2);
     _settingsButton = [[UIButton alloc] initWithFrame:_settingsButtonRect];
-    [_settingsButton setBackgroundColor:UIColorFromRGB(0x5590a5)];
+    [_settingsButton setContentMode:UIViewContentModeScaleAspectFit];
+    [_settingsButton setImage:_settingsImage forState:UIControlStateNormal];
+    [_settingsButton setImage:_settingsImage forState:UIControlStateHighlighted];
     [_settingsButton addTarget:self action:@selector(settingsButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    [_settingsButton setImage:[UIImage imageNamed:@"mainViewSettings.png"] forState:UIControlStateNormal];
-    [_settingsButton setImage:[UIImage imageNamed:@"mainViewSettings.png"] forState:UIControlStateHighlighted];
-    _settingsButton.layer.cornerRadius = 10;
     [self.view addSubview:_settingsButton];
     
-    // Settings label
-    _settingsButtonLabel = [[UILabel alloc] initWithFrame:_settingsButtonLabelRect];
-    _settingsButtonLabel.text = NSLocalizedString(@"settingsButton", nil);
-    _settingsButtonLabel.textColor = _titlesColor;
-    _settingsButtonLabel.font = _titlesFont;
-    _settingsButtonLabel.textAlignment = NSTextAlignmentCenter;
-    _settingsButtonLabel.numberOfLines = 0;
-    [self.view addSubview:_settingsButtonLabel];
-    
 }
-
-
 
 // Send Help button action
 - (void)sendHelpButtonAction
 {
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"sendHelpNavBar.png"] forBarMetrics:UIBarMetricsDefault];
+    if (_iPhone6)
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"sendHelpNavBar@2x-667.png"] forBarMetrics:UIBarMetricsDefault];
+    else
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"sendHelpNavBar.png"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController pushViewController:_sendHelpViewController animated:YES];
 }
 
 // Settings button action
 - (void)settingsButtonAction
 {
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"settingsNavBar.png"] forBarMetrics:UIBarMetricsDefault];
+    if (_iPhone6)
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"settingsNavBar@2x-667.png"] forBarMetrics:UIBarMetricsDefault];
+    else
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"settingsNavBar.png"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController pushViewController:_settingsViewController animated:YES];
 }
 
@@ -179,11 +105,13 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
 }
 
 // Set navigation bar back button
