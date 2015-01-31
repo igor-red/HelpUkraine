@@ -128,8 +128,8 @@
     
     // Reload DB button
     _reloadDatabaseButton = [[UIButton alloc] initWithFrame:_reloadDatabaseButtonRect];
-    [_reloadDatabaseButton setImage:[UIImage imageNamed:@"webViewRefreshButtonEnabled@2x"] forState:UIControlStateNormal];
-    [_reloadDatabaseButton setImage:[UIImage imageNamed:@"webViewRefreshButtonEnabled@2x"] forState:UIControlStateHighlighted];
+    [_reloadDatabaseButton setImage:[UIImage imageNamed:@"webViewRefreshButtonEnabled.png"] forState:UIControlStateNormal];
+    [_reloadDatabaseButton setImage:[UIImage imageNamed:@"webViewRefreshButtonEnabled.png"] forState:UIControlStateHighlighted];
     _reloadDatabaseButton.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
     [_reloadDatabaseButton addTarget:self action:@selector(reloadDatabaseButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_reloadDatabaseButton];
@@ -293,6 +293,11 @@
 // Stop database updating
 - (void)databaseStopUpdating {
     _databaseIsUpdating = NO;
+}
+
+- (void)checkForInternet
+{
+    
 }
 
 // Reload DB button action

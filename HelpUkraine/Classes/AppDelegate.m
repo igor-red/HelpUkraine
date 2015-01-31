@@ -267,7 +267,7 @@ NSString *_previousViewControllerName;
 // Check for internet connection
 - (BOOL)isThereInternet
 {
-    Reachability *_reachability = [Reachability reachabilityForInternetConnection];
+    Reachability *_reachability = [Reachability reachabilityWithHostName:@"www.google.com"];
     NetworkStatus _networkStatus = [_reachability currentReachabilityStatus];
     return _networkStatus != NotReachable;
 }

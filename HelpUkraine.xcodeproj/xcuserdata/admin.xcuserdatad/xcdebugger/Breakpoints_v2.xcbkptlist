@@ -1096,11 +1096,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelpUkraine/Classes/SettingsViewController.m"
-            timestampString = "442228373.197039"
+            timestampString = "444412051.334975"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
+            startingLineNumber = "344"
+            endingLineNumber = "344"
             landmarkName = "-noInternetMessage"
             landmarkType = "5">
          </BreakpointContent>
@@ -1112,11 +1112,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelpUkraine/Classes/SettingsViewController.m"
-            timestampString = "442264918.870432"
+            timestampString = "444412051.334975"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "445"
-            endingLineNumber = "445"
+            startingLineNumber = "450"
+            endingLineNumber = "450"
             landmarkName = "-languageChanged:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1702,7 +1702,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelpUkraine/Classes/AppDelegate.m"
-            timestampString = "443991241.708889"
+            timestampString = "444413880.673437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "363"
@@ -1718,11 +1718,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelpUkraine/Classes/SettingsViewController.m"
-            timestampString = "442264918.870432"
+            timestampString = "444412051.334975"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "372"
-            endingLineNumber = "372"
+            startingLineNumber = "377"
+            endingLineNumber = "377"
             landmarkName = "-switchedNotifications:"
             landmarkType = "5">
          </BreakpointContent>
