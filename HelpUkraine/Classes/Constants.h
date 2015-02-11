@@ -5,6 +5,8 @@
 //  Created by Admin on 10/18/14.
 //  Copyright (c) 2014 Igor Zhariy. All rights reserved.
 //
+#import "Remote.h"
+
 
 // Macro for getting RGB UIColor from hex color palette
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
@@ -50,11 +52,6 @@
 #define _dictData [[NSMutableArray alloc] initWithContentsOfFile:_dictFilePath]
 
 // Macro for accessing remote files and their paths
-#ifdef DEBUG
-#define _webFilePrefix @"http://helpua.com.ua/appdata/debug"
-#else
-#define _webFilePrefix @"http://helpua.com.ua/appdata/production"
-#endif
 #define _webFileDataPhp [NSString stringWithFormat:@"%@/%@", _webFilePrefix, @"data.php"]
 #define _webFilePlist [NSString stringWithFormat:@"%@/%@", _webFilePrefix, @"plist.plist"]
 #define _webFileDict [NSString stringWithFormat:@"%@/%@", _webFilePrefix, @"dict.plist"]

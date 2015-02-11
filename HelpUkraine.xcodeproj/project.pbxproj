@@ -128,6 +128,7 @@
 		840027B919F287B70095C30C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		840027BA19F2B0FA0095C30C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		840027BB19F2B0FA0095C30C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		84132D3F1A8BCD4A00563FFB /* Remote.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Remote.h; sourceTree = "<group>"; };
 		841871B9199767E20033AEBE /* HelpUkraine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpUkraine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841871BC199767E20033AEBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		841871BE199767E30033AEBE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -275,7 +276,6 @@
 		8400279A19EF0A4F0095C30C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8429FAA41A5C1416007AC561 /* minizip */,
 				8400279B19EF0A4F0095C30C /* AppDelegate.h */,
 				8400279C19EF0A4F0095C30C /* AppDelegate.m */,
 				840027B919F287B70095C30C /* Constants.h */,
@@ -291,10 +291,12 @@
 				840027A219EF0A4F0095C30C /* ListViewController.m */,
 				840027A319EF0A4F0095C30C /* MainViewController.h */,
 				840027A419EF0A4F0095C30C /* MainViewController.m */,
+				8429FAA41A5C1416007AC561 /* minizip */,
 				840027A519EF0A4F0095C30C /* PushViewController.h */,
 				840027A619EF0A4F0095C30C /* PushViewController.m */,
 				840027BA19F2B0FA0095C30C /* Reachability.h */,
 				840027BB19F2B0FA0095C30C /* Reachability.m */,
+				84132D3F1A8BCD4A00563FFB /* Remote.h */,
 				84316D8C1A07C16400F3629A /* SendHelpTableViewCell.h */,
 				84316D8D1A07C16400F3629A /* SendHelpTableViewCell.m */,
 				840027A719EF0A4F0095C30C /* SendHelpViewController.h */,
